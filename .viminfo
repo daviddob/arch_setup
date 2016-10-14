@@ -17,10 +17,10 @@
 $
 
 # Command Line History (newest to oldest):
+:q
+|2,0,1476413974,,"q"
 :wq
 |2,0,1476413713,,"wq"
-:q
-|2,0,1476413704,,"q"
 :q:q
 |2,0,1476413047,,"q:q"
 :q!
@@ -119,10 +119,10 @@ $
 |2,0,0,,"Q"
 
 # Search String History (newest to oldest):
+? @$
+|2,1,1476413972,,"@$"
 ?/focus_
 |2,1,1476413489,47,"focus_"
-? @$
-|2,1,1476410239,,"@$"
 ?/i3exit
 |2,1,1476409270,47,"i3exit"
 ?/i3lock
@@ -205,9 +205,9 @@ $
 # Debug Line History (newest to oldest):
 
 # Registers:
-"0	CHAR	0
-	s
-|3,0,0,0,1,0,1476410239,"s"
+""0	CHAR	0
+	e
+|3,1,0,0,1,0,1476413972,"e"
 "1	CHAR	0
 	
 	# ssh Stuff
@@ -406,9 +406,9 @@ $
 	
 	
 |3,0,9,0,15,0,0,"set $mod Mod4","set $alt Mod1","set $fn  XF86WakeUp","set $gaps_inner 16","set $gaps_outer 16","set $border_px 1","","set $term        gnome-terminal","set $browser     google-chrome","set $messenger   cutegram","set $chat        chat","set $filemanager ranger","set $theme       arch-dotted","",""
-""-	CHAR	0
+"-	CHAR	0
 	e
-|3,1,36,0,1,0,1476412321,"e"
+|3,0,36,0,1,0,1476412321,"e"
 
 # File marks:
 '0  5  0  ~/.scripts/i3exit.sh
@@ -433,14 +433,32 @@ $
 |4,57,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
 
 # Jumplist (newest first):
+-'  1  0  ~/.vim/bundle/vim-airline/.git
+|4,39,1,0,1476413972,"~/.vim/bundle/vim-airline/.git"
 -'  5  0  ~/.scripts/i3exit.sh
 |4,39,5,0,1476413713,"~/.scripts/i3exit.sh"
+-'  5  0  ~/.scripts/i3exit.sh
+|4,39,5,0,1476413713,"~/.scripts/i3exit.sh"
+-'  1  0  ~/.scripts/i3exit.sh
+|4,39,1,0,1476413706,"~/.scripts/i3exit.sh"
 -'  1  0  ~/.scripts/i3exit.sh
 |4,39,1,0,1476413706,"~/.scripts/i3exit.sh"
 -'  1  0  ~/.scripts/lock.sh
 |4,39,1,0,1476413704,"~/.scripts/lock.sh"
 -'  1  0  ~/.scripts/lock.sh
 |4,39,1,0,1476413704,"~/.scripts/lock.sh"
+-'  1  0  ~/.scripts/lock.sh
+|4,39,1,0,1476413704,"~/.scripts/lock.sh"
+-'  1  0  ~/.scripts/lock.sh
+|4,39,1,0,1476413704,"~/.scripts/lock.sh"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1476413656,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1476413656,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1476413656,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1476413656,"~/.zshrc"
 -'  1  0  ~/.zshrc
 |4,39,1,0,1476413656,"~/.zshrc"
 -'  1  0  ~/.zshrc
@@ -465,6 +483,22 @@ $
 |4,39,379,24,1476413581,"~/.i3/config"
 -'  379  24  ~/.i3/config
 |4,39,379,24,1476413581,"~/.i3/config"
+-'  379  24  ~/.i3/config
+|4,39,379,24,1476413581,"~/.i3/config"
+-'  379  24  ~/.i3/config
+|4,39,379,24,1476413581,"~/.i3/config"
+-'  379  24  ~/.i3/config
+|4,39,379,24,1476413581,"~/.i3/config"
+-'  379  24  ~/.i3/config
+|4,39,379,24,1476413581,"~/.i3/config"
+-'  379  24  ~/.i3/config
+|4,39,379,24,1476413581,"~/.i3/config"
+-'  379  24  ~/.i3/config
+|4,39,379,24,1476413581,"~/.i3/config"
+-'  379  24  ~/.i3/config
+|4,39,379,24,1476413581,"~/.i3/config"
+-'  379  24  ~/.i3/config
+|4,39,379,24,1476413581,"~/.i3/config"
 -'  1  0  ~/.i3/config
 |4,39,1,0,1476413573,"~/.i3/config"
 -'  1  0  ~/.i3/config
@@ -481,6 +515,38 @@ $
 |4,39,1,0,1476413573,"~/.i3/config"
 -'  1  0  ~/.i3/config
 |4,39,1,0,1476413573,"~/.i3/config"
+-'  1  0  ~/.i3/config
+|4,39,1,0,1476413573,"~/.i3/config"
+-'  1  0  ~/.i3/config
+|4,39,1,0,1476413573,"~/.i3/config"
+-'  1  0  ~/.i3/config
+|4,39,1,0,1476413573,"~/.i3/config"
+-'  1  0  ~/.i3/config
+|4,39,1,0,1476413573,"~/.i3/config"
+-'  1  0  ~/.i3/config
+|4,39,1,0,1476413573,"~/.i3/config"
+-'  1  0  ~/.i3/config
+|4,39,1,0,1476413573,"~/.i3/config"
+-'  1  0  ~/.i3/config
+|4,39,1,0,1476413573,"~/.i3/config"
+-'  1  0  ~/.i3/config
+|4,39,1,0,1476413573,"~/.i3/config"
+-'  379  34  ~/.i3/config
+|4,39,379,34,1476413537,"~/.i3/config"
+-'  379  34  ~/.i3/config
+|4,39,379,34,1476413537,"~/.i3/config"
+-'  379  34  ~/.i3/config
+|4,39,379,34,1476413537,"~/.i3/config"
+-'  379  34  ~/.i3/config
+|4,39,379,34,1476413537,"~/.i3/config"
+-'  379  34  ~/.i3/config
+|4,39,379,34,1476413537,"~/.i3/config"
+-'  379  34  ~/.i3/config
+|4,39,379,34,1476413537,"~/.i3/config"
+-'  379  34  ~/.i3/config
+|4,39,379,34,1476413537,"~/.i3/config"
+-'  379  34  ~/.i3/config
+|4,39,379,34,1476413537,"~/.i3/config"
 -'  379  34  ~/.i3/config
 |4,39,379,34,1476413537,"~/.i3/config"
 -'  379  34  ~/.i3/config
@@ -514,6 +580,34 @@ $
 -'  1  0  ~/.i3/config
 |4,39,1,0,1476413509,"~/.i3/config"
 -'  1  0  ~/.i3/config
+|4,39,1,0,1476413509,"~/.i3/config"
+-'  1  0  ~/.i3/config
+|4,39,1,0,1476413509,"~/.i3/config"
+-'  1  0  ~/.i3/config
+|4,39,1,0,1476413509,"~/.i3/config"
+-'  1  0  ~/.i3/config
+|4,39,1,0,1476413509,"~/.i3/config"
+-'  1  0  ~/.i3/config
+|4,39,1,0,1476413509,"~/.i3/config"
+-'  1  0  ~/.i3/config
+|4,39,1,0,1476413509,"~/.i3/config"
+-'  1  0  ~/.i3/config
+|4,39,1,0,1476413509,"~/.i3/config"
+-'  1  0  ~/.i3/config
+|4,39,1,0,1476413509,"~/.i3/config"
+-'  1  0  ~/.i3/config
+|4,39,1,0,1476413491,"~/.i3/config"
+-'  1  0  ~/.i3/config
+|4,39,1,0,1476413491,"~/.i3/config"
+-'  1  0  ~/.i3/config
+|4,39,1,0,1476413491,"~/.i3/config"
+-'  1  0  ~/.i3/config
+|4,39,1,0,1476413491,"~/.i3/config"
+-'  1  0  ~/.i3/config
+|4,39,1,0,1476413491,"~/.i3/config"
+-'  1  0  ~/.i3/config
+|4,39,1,0,1476413491,"~/.i3/config"
+-'  1  0  ~/.i3/config
 |4,39,1,0,1476413491,"~/.i3/config"
 -'  1  0  ~/.i3/config
 |4,39,1,0,1476413491,"~/.i3/config"
@@ -529,106 +623,10 @@ $
 |4,39,1,0,1476413491,"~/.i3/config"
 -'  1  0  ~/.i3/config
 |4,39,1,0,1476413491,"~/.i3/config"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
--'  18  0  ~/.i3/i3_focus_or_run.sh
-|4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
+-'  1  0  ~/.i3/config
+|4,39,1,0,1476413491,"~/.i3/config"
+-'  1  0  ~/.i3/config
+|4,39,1,0,1476413491,"~/.i3/config"
 -'  18  0  ~/.i3/i3_focus_or_run.sh
 |4,39,18,0,1476413474,"~/.i3/i3_focus_or_run.sh"
 -'  18  0  ~/.i3/i3_focus_or_run.sh
