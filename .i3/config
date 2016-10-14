@@ -1,77 +1,84 @@
+##########################################################################
+#                                  startup                               #
+##########################################################################
+
 #Startup
 exec --no-startup-id nm-applet
 exec ~/.fehbg &
-
-# Workspaces Statup
 exec --no-startup-id "i3-msg 'workspace  home'"
-
-# Laptop Stuff
 exec xinput --set-prop 13 "Synaptics Two-Finger Scrolling" 1 1
-exec --no-startup-id perl ~/.scripts/xSwipe/xSwipe.pl -m 30
-exec --no-startup-id xmodmap ~/.xmodmaprc
 exec --no-startup-id compton -c -f --vsync opengl --config ~/.i3/compton.conf -b
+
+
+##########################################################################
+#                               app variables                            #
+##########################################################################
+
 set $audioOutput 1
-set $fontSize 16
-
-set $i3exit /home/iceman/.scripts/i3exit.sh
-# Desktop Stuff
-# exec --no-startup-id xrandr --output HDMI-0 --auto --left-of DVI-I-1
-# bindsym Control+$alt+Left move workspace to output left
-# bindsym Control+$alt+Right move workspace to output right
-# exec --no-startup-id compton -c -f --config ~/.i3/compton.conf -b 
-# exec --no-startup-id systemctl enable ckb-daemon && systemctl start ckb-daemon
-# set $audioOutput 2
-# set $fontSize 9
-
 set $mod Mod4
 set $alt Mod1
 set $fn  XF86WakeUp
+
+set $fontSize 16
 set $gaps_inner 10
 set $gaps_outer 10
 set $border_px 5
 
+set $i3exit /home/iceman/.scripts/i3exit.sh
 set $term        gnome-terminal
 set $browser     google-chrome-stable
-set $messenger   cutegram
-set $chat        chat
-set $filemanager ranger
+set $filemanager thunar
 set $theme       arch-dotted
 
-set $wallpaper   /bin/wallpaper-change
+##########################################################################
+#                               app keybinds                             #
+##########################################################################
 
 # Assign workspaces
-#assign [class="(?i)$browser"] $browser
-assign [class="(?i)spotify"] " spotify"
-#assign [class="(?i)gimp|inkscape"] gfx
+
 assign [title="(?i)atom"] " atom"
 assign [title="(?i)steam"] " steam"
 assign [title="(?i)plex"] " plex"
 #assign [title="(?i)minecraft] " gaming"
+#assign [class="(?i)gimp|inkscape"] gfx
+#assign [class="(?i)$browser"] $browser
+#assign [class="(?i)spotify"] " spotify"
 
 # Custom key-bindings
 bindsym $mod+c exec $browser; workspace  chrome
-bindsym $mod+Control+p exec gpmdp ;workspace  play
-bindsym $mod+m workspace " files"; exec gnome-terminal -e ranger
-bindsym $mod+Shift+m workspace " files"; exec thunar
-bindsym $mod+o exec $wallpaper $theme
+bindsym $mod+z exec gpmdp; workspace  play
+bindsym $mod+a exec atom; workspace " atom"
+bindsym $mod+s workspace " chat"; exec slack; exec google-chrome-stable --app="chrome-extension://chlffgpmiacpedhhbkiomidkjlcfhogd/panel.html#popout"
+#bindsym $mod+s workspace " steam"; exec sh ~/.scripts/steam.sh
+
+#open filemanager in new or existing workspace
+bindsym $mod+Shift+m workspace " files"; exec gnome-terminal -e ranger
+bindsym $mod+o workspace " files"; exec $filemanager
+bindsym $mod+m exec $filemanager
+
+# start a terminal
+bindsym $mod+Return workspace " term"; exec $term
+# start a terminal in current working directory
+bindsym $mod+Shift+Return exec $term -d "`xcwd`"
+#start terminal in current workspace
 bindsym $mod+t exec $term
-bindsym $mod+Shift+a exec atom; workspace " atom"
-bindsym $mod+Control+space exec ~/.scripts/prelock.sh && ~/.scripts/lock.sh
-bindsym $mod+h workspace " chat"; exec slack; exec teamspeak3
-bindsym $mod+s workspace " steam"; exec sh ~/.scripts/steam.sh
 
-# Screenshots
-set $screenshots ~/Pictures/Screenshots
+# kill focused window
+bindsym $mod+q kill
 
-bindsym Print --release exec escrotum -e 'mv $f $screenshots'
-bindsym $mod+Print --release exec escrotum -s -e 'mv $f $screenshots'
+# start a program launcher
+#bindsym $mod+d exec rofi -show run -opacity "80"
+bindsym $mod+space exec ~/.i3/rofi.sh
+
+
+##########################################################################
+#                                   gaps                                 #
+##########################################################################
 
 # smart_gaps on
-
 # Window spacing (gap)
 gaps inner $gaps_inner
 gaps outer $gaps_outer
-
 smart_borders no_gaps
 
 # Remove titlebar
@@ -120,6 +127,10 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
+##########################################################################
+#                                workspaces                              #
+##########################################################################
+
 workspace " atom" gaps inner 0
 workspace " atom" gaps outer 0
 workspace " chrome" gaps inner 0
@@ -146,59 +157,6 @@ workspace " gaming" gaps outer 0
 #font pango:Terminus 11px
 font pango:System San Francisco Display Regular $fontSize
 
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
-
-# start a terminal
-bindsym $mod+Return workspace " term"; exec $term
-# start a terminal in current working directory
-bindsym $mod+Shift+Return exec $term -d "`xcwd`"
-
-# kill focused window
-bindsym $mod+q kill
-
-# start a program launcher
-#bindsym $mod+d exec rofi -show run -opacity "80"
-bindsym $mod+space exec ~/.i3/rofi.sh
-
-# change focus
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
-# move focused window
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
-
-# split in horizontal orientation
-bindsym $mod+g split h
-
-# split in vertical orientation
-bindsym $mod+v split v
-
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen
-
-# change container layout (stacked, tabbed, toggle split)
-#bindsym $mod+Shift+s layout stacking
-#bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
-
-# toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
-
-# change focus between tiling / floating windows
-#bindsym $mod+space focus mode_toggle
-
-# focus the parent container
-Bindsym $mod+a focus parent
-
-# focus the child container
-bindsym $mod+y focus child
-
 # switch to workspace
 bindsym $mod+1 workspace " home"
 bindsym $mod+2 workspace 2
@@ -214,8 +172,6 @@ bindsym $mod+0 workspace 10
 # switch to next/previous workspace
 bindsym XF86Forward workspace next
 bindsym XF86Back    workspace prev
-bindsym $alt+l      workspace next
-bindsym $alt+h      workspace prev
 bindsym $mod+Control+Left   workspace prev
 bindsym $mod+Control+Right  workspace next
 
@@ -240,6 +196,55 @@ bindsym $mod+Shift+XF86Back    move container to workspace prev
 bindsym $mod+Shift+Control+Right move container to workspace next
 bindsym $mod+Shift+Control+Left move container to workspace prev
 
+##########################################################################
+#                                   focus                                #
+##########################################################################
+
+# change focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen
+
+# change container layout (stacked, tabbed, toggle split)
+#bindsym $mod+Shift+s layout stacking
+#bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+#bindsym $mod+space focus mode_toggle
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# focus the parent container
+Bindsym $mod+Shift+a focus parent
+
+# focus the child container
+bindsym $mod+Shift+y focus child
+
+##########################################################################
+#                  shut down / restart / lock / reload i3                #
+##########################################################################
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -248,6 +253,25 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec $i3exit logout
 # lock screen
 bindsym $mod+l exec $i3exit lock
+
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $i3exit lock, mode "default"
+    bindsym e exec --no-startup-id $i3exit logout, mode "default"
+    bindsym s exec --no-startup-id $i3exit suspend, mode "default"
+    bindsym h exec --no-startup-id $i3exit hibernate, mode "default"
+    bindsym r exec --no-startup-id $i3exit reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id $i3exit shutdown, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+BackSpace mode "$mode_system"
+
+##########################################################################
+#                            function keybinds                           #
+##########################################################################
 
 # audio-bindings
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-mute $audioOutput false ; pactl set-sink-volume $audioOutput +1%"
@@ -258,12 +282,12 @@ bindsym XF86AudioNext exec "playerctl next"
 bindsym XF86AudioPrev exec "playerctl previous"
 
 #brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
-# keybaord backlight controls
-bindsym XF86KbdBrightnessUp exec "sh ~/.scripts/keyBoardLED_Up.sh"
-bindsym XF86KbdBrightnessDown exec  "sh ~/.scripts/keyBoardLED_Down.sh"
+##########################################################################
+#                               resize windows                           #
+##########################################################################
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -292,6 +316,10 @@ mode "resize" {
     bindsym n gaps inner current set 0; gaps outer all set 0
     bindsym b gaps inner current set $gaps_inner; gaps outer all set $gaps_outer
 }
+
+##########################################################################
+#                                 bar colors                             #
+##########################################################################
 
 bindsym $mod+r mode "resize"
 
@@ -331,7 +359,7 @@ set $magenta13 #c281e3
 set $cyan6  #52d3e2
 set $cyan14 #81d8e3
 
-# orange 
+# orange
 set $orange #FF9900
 
 # white
@@ -339,8 +367,6 @@ set $white1 #FFFFFF
 set $white5 #6C6C6C
 set $white7  #CCCCCC
 set $white15 #AFAFAF
-#set $white7  #acbfd2
-#set $white15 #c7ccd1
 
 # orange
 set $orange #ff7f00
@@ -364,13 +390,16 @@ set $brightBlue #0099FF
 set $barColor #4C4C4C70
 set $activeWindow #0099FF
 
-# class                 bg          border      text        indicator
-client.focused          $background $activeWindow $foreground $activeWindow
-client.focused_inactive $background $black0     $foreground $white7
-client.unfocused        $background $white5     $foreground $white15
-client.urgent           $background $red1       $foreground	$red9
-client.placeholder      $background $background $foreground	$background
+##########################################################################
+#                                bar settings                            #
+##########################################################################
 
+# class                 bg          border           text       indicator
+client.focused          $background $activeWindow $foreground $activeWindow
+client.focused_inactive $background $black0       $foreground $white7
+client.unfocused        $background $white5       $foreground $white15
+client.urgent           $background $red1         $foreground $red9
+client.placeholder      $background $background   $foreground $background
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -385,7 +414,7 @@ bar {
     hidden_state hide
     modifier $mod
    	font pango: DejaVu Sans Mono, Icons $fontSize
- 	
+
 	#position top
 
 	colors {
@@ -400,23 +429,5 @@ bar {
 		urgent_workspace   $barColor  $barColor  $orange
     }
 }
-
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
-mode "$mode_system" {
-    bindsym l exec --no-startup-id $i3exit lock, mode "default"
-    bindsym e exec --no-startup-id $i3exit logout, mode "default"
-    bindsym s exec --no-startup-id $i3exit suspend, mode "default"
-    bindsym h exec --no-startup-id $i3exit hibernate, mode "default"
-    bindsym r exec --no-startup-id $i3exit reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id $i3exit shutdown, mode "default"
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-bindsym $mod+BackSpace mode "$mode_system"
-
-# Set background
-exec $wallpaper $theme
-
+# Syntax Hilighting
 # vim:filetype=i3
