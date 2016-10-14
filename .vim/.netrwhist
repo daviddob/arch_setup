@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='scp://mdrewitt@cheshire.cse.buffalo.edu//web/planetexpress/'
+let g:netrw_dirhist_2='scp://mdrewitt@cheshire.cse.buffalo.edu//web/planetexpress/dev/'
+let g:netrw_dirhist_3='/home/iceman/.scripts'
