@@ -39,7 +39,7 @@ done
 
 # get path where the script is located to find the lock icon
 SCRIPTPATH=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-SCRIPTPATH=$SCRIPTPATH"/icons"
+SCRIPTPATH=$SCRIPTPATH"/assets/icons"
 
 # l10n support
 TEXT="Your shouldn't be here..."

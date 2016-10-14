@@ -1,3 +1,3 @@
-i3lock -n -i "/home/iceman/.scripts/screenLock.png"
+i3lock -n -i "/home/iceman/.scripts/assets/screenLock.png"
 
 
