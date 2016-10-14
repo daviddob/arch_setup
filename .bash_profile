@@ -4,6 +4,7 @@
 
 #[[ -f ~/.bashrc ]] && . ~/.bashrc
 
+alias l='ls'
 alias ll='ls -la'
 alias la='ls -a'
 alias rm='rm -i'

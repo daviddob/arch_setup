@@ -4,9 +4,9 @@
 
 #Startup
 exec --no-startup-id nm-applet
-exec ~/.fehbg &
+exec --no-startup-id ~/.fehbg &
 exec --no-startup-id "i3-msg 'workspace  home'"
-exec xinput --set-prop 13 "Synaptics Two-Finger Scrolling" 1 1
+exec --no-startup-id xinput --set-prop 13 "Synaptics Two-Finger Scrolling" 1 1
 exec --no-startup-id compton -c -f --vsync opengl --config ~/.i3/compton.conf -b
 
 
@@ -19,12 +19,12 @@ set $mod Mod4
 set $alt Mod1
 set $fn  XF86WakeUp
 
-set $fontSize 16
+set $fontSize   16
 set $gaps_inner 10
 set $gaps_outer 10
-set $border_px 5
+set $border_px  5
 
-set $i3exit /home/iceman/.scripts/i3exit.sh
+set $i3exit      /home/iceman/.scripts/i3exit.sh
 set $term        gnome-terminal
 set $browser     google-chrome-stable
 set $filemanager thunar
@@ -96,35 +96,35 @@ new_float pixel $border_px
 #bindsym $mod+Shift+g mode "$mode_gaps"
 
 mode "$mode_gaps" {
-        bindsym o      mode "$mode_gaps_outer"
-        bindsym i      mode "$mode_gaps_inner"
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    bindsym o      mode "$mode_gaps_outer"
+    bindsym i      mode "$mode_gaps_inner"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
-        bindsym 0     gaps inner current set 0
+    bindsym plus  gaps inner current plus 5
+    bindsym minus gaps inner current minus 5
+    bindsym 0     gaps inner current set 0
 
-        bindsym Shift+plus  gaps inner all plus 5
-        bindsym Shift+minus gaps inner all minus 5
-        bindsym Shift+0     gaps inner all set 0
+	bindsym Shift+plus  gaps inner all plus 5
+    bindsym Shift+minus gaps inner all minus 5
+    bindsym Shift+0     gaps inner all set 0
 
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 mode "$mode_gaps_outer" {
-        bindsym plus  gaps outer current plus 5
-        bindsym minus gaps outer current minus 5
-        bindsym 0     gaps outer current set 0
+    bindsym plus  gaps outer current plus 5
+    bindsym minus gaps outer current minus 5
+    bindsym 0     gaps outer current set 0
 
-        bindsym Shift+plus  gaps outer all plus 5
-        bindsym Shift+minus gaps outer all minus 5
-        bindsym Shift+0     gaps outer all set 0
+    bindsym Shift+plus  gaps outer all plus 5
+    bindsym Shift+minus gaps outer all minus 5
+    bindsym Shift+0     gaps outer all set 0
 
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 ##########################################################################
