@@ -3,6 +3,7 @@
 #
 
 #[[ -f ~/.bashrc ]] && . ~/.bashrc
+source /usr/lib/z.sh
 
 alias l='ls'
 alias ll='ls -la'
