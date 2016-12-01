@@ -7,7 +7,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id ~/.fehbg &
 exec --no-startup-id "i3-msg 'workspace  home'"
 exec --no-startup-id xinput --set-prop 13 "Synaptics Two-Finger Scrolling" 1 1
-exec --no-startup-id compton -c -f --vsync opengl --config ~/.i3/compton.conf -b
+exec --no-startup-id compton -c -f --vsync opengl --config ~/.i3/compton-desktop.conf -b
 
 
 ##########################################################################

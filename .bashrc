@@ -10,5 +10,5 @@ PS1='[\u@\h \W]\$ '
 BROWSER=/usr/bin/google-chrome-stable
 EDITOR=vim
 PATH=/opt/android-sdk/tools/:$PATH
-ANDROID_HOME=/opt/android-sdk/tools/
+ANDROID_HOME=/opt/android-sdk/
 source ~/.bash_profile

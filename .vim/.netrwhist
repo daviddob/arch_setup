@@ -1,6 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='scp://mdrewitt@cheshire.cse.buffalo.edu//web/planetexpress/'
 let g:netrw_dirhist_2='scp://mdrewitt@cheshire.cse.buffalo.edu//web/planetexpress/dev/'
 let g:netrw_dirhist_3='/home/iceman/.scripts'
 let g:netrw_dirhist_4='/home/iceman/.vim/bundle/vim-airline/.git'
+let g:netrw_dirhist_5='/home/iceman/.i3'

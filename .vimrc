@@ -320,10 +320,10 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Indent rules, Linux Kernel Coding Style
 autocmd FileType c
-	\ setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
+	\ setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 	\ list lcs=tab:+·
 autocmd FileType cpp,java,javascript,json,markdown,php,python
-	\ setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
+	\ setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 	\ list lcs=tab:+·
 autocmd FileType markdown setlocal textwidth=80
 autocmd FileType prg
