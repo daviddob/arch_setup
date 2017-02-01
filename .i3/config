@@ -14,7 +14,7 @@ exec --no-startup-id compton -c -f --vsync opengl --config ~/.i3/compton-desktop
 #                               app variables                            #
 ##########################################################################
 
-set $audioOutput 1
+set $audioOutput 0
 set $mod Mod4
 set $alt Mod1
 set $fn  XF86WakeUp
