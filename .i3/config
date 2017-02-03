@@ -37,6 +37,7 @@ set $theme       arch-dotted
 # Assign workspaces
 
 assign [title="(?i)atom"] " atom"
+assign [title="(?i)android"] " android"
 assign [title="(?i)steam"] " steam"
 assign [title="(?i)plex"] " plex"
 #assign [title="(?i)minecraft] " gaming"
@@ -133,6 +134,8 @@ mode "$mode_gaps_outer" {
 
 workspace " atom" gaps inner 0
 workspace " atom" gaps outer 0
+workspace " android" gaps outer 0
+workspace " android" gaps outer 0
 workspace " chrome" gaps inner 0
 workspace " chrome" gaps outer 0
 workspace " spotify" gaps inner 0

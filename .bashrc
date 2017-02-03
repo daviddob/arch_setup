@@ -6,9 +6,9 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-PS1='[\u@\h \W]\$ '
+export PS1="\[\033[1;32m\][\u@\h\W]\[\033[1;34m\]\$ \[\033[0m\]"
 BROWSER=/usr/bin/google-chrome-stable
 EDITOR=vim
-PATH=/opt/android-sdk/tools/:$PATH
-ANDROID_HOME=/opt/android-sdk/
+ANDROID_HOME=/home/iceman/Android/Sdk
+PATH=$ANDROID_HOME/platform-tools/:$ANDROID_HOME/tools/:$PATH
 source ~/.bash_profile
